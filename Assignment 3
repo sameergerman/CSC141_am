@@ -1,0 +1,164 @@
+# List of friends' names
+names = ["Alice", "Bob", "Charlie", "Diana"]
+
+# Printing each name one at a time
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[3])
+
+
+# Greeting each friend with a personalized message
+print(f"Hello, {names[0]}! Hope you're having a great day.")
+print(f"Hello, {names[1]}! Hope you're having a great day.")
+print(f"Hello, {names[2]}! Hope you're having a great day.")
+print(f"Hello, {names[3]}! Hope you're having a great day.")
+
+
+# Favorite mode of transportation: cars
+vehicles = ["Tesla Model S", "Ford Mustang", "BMW M3", "Audi R8"]
+
+# Printing statements about the vehicles
+print(f"I would like to own a {vehicles[0]}.")
+print(f"I would like to own a {vehicles[1]}.")
+print(f"I would like to own a {vehicles[2]}.")
+print(f"I would like to own a {vehicles[3]}.")
+
+
+# List of dinner guests
+guests = ["Jeremy Lin", "Jalen Brunson", "Kevin Hart"]
+
+# Printing invitation messages
+print(f"Hi {guests[0]}, I’d be honored to have you join me for dinner.")
+print(f"Hi {guests[1]}, I’d love for you to come to dinner with me.")
+print(f"Hi {guests[2]}, it would be amazing to have you at dinner.")
+
+
+# Original guest list
+guests = ["Jeremy Lin", "Jalen Brunson", "Kevin Hart"]
+
+# Announce that Kevin Hart can't make it
+print(f"Unfortunately, {guests[2]} can't make it to dinner.")
+
+# Replace Kevin Hart with a new guest
+guests[2] = "Stephen Curry"
+
+# Send new invitations
+print(f"Hi {guests[0]}, I’d be honored to have you join me for dinner.")
+print(f"Hi {guests[1]}, I’d love for you to come to dinner with me.")
+print(f"Hi {guests[2]}, it would be amazing to have you at dinner.")
+
+
+# Inform about the bigger table
+print("Great news! I found a bigger dinner table, so I’m inviting more guests.")
+
+# Add more guests
+guests.insert(0, "Michelle Obama")           # Beginning
+guests.insert(2, "LeBron James")             # Middle
+guests.append("Zendaya")                     # End
+
+# Print new invitations
+for guest in guests:
+    print(f"Hi {guest}, you’re invited to a special dinner at my place!")
+
+
+# Bad news: only two people can be invited
+print("Bad news—my new dinner table won’t arrive in time. I can only invite two people for dinner.")
+
+# Remove guests until only two remain
+while len(guests) > 2:
+    removed_guest = guests.pop()
+    print(f"Sorry {removed_guest}, I can’t invite you to dinner this time.")
+
+# Let the remaining guests know they’re still invited
+for guest in guests:
+    print(f"{guest}, you’re still invited to dinner!")
+
+# Remove the last two guests
+del guests[0]
+del guests[0]
+
+# Confirm the list is empty
+print("Final guest list:", guests)
+
+
+# List of places to visit (not in alphabetical order)
+places = ["Tokyo", "New York", "Reykjavik", "Cairo", "Barcelona"]
+
+# Original order
+print("Original order:", places)
+
+# Alphabetical order (temporary)
+print("Alphabetical order:", sorted(places))
+
+# Confirm original order is unchanged
+print("Still original order:", places)
+
+# Reverse alphabetical order (temporary)
+print("Reverse alphabetical order:", sorted(places, reverse=True))
+
+# Confirm original order is unchanged
+print("Still original order:", places)
+
+# Reverse the order (permanent)
+places.reverse()
+print("Reversed order:", places)
+
+# Reverse again to original
+places.reverse()
+print("Back to original order:", places)
+
+# Sort alphabetically (permanent)
+places.sort()
+print("Alphabetical order (permanent):", places)
+
+# Sort in reverse-alphabetical order (permanent)
+places.sort(reverse=True)
+print("Reverse alphabetical order (permanent):", places)
+
+
+# Guest list before shrinking (from 3-6)
+guests = ["Michelle Obama", "Jeremy Lin", "LeBron James", "Jalen Brunson", "Stephen Curry", "Zendaya"]
+
+# Number of guests invited
+print(f"I am inviting {len(guests)} people to dinner.")
+
+
+# List of languages
+languages = ["Japanese", "Spanish", "Arabic", "French", "Korean"]
+
+# Print original list
+print("Original list:", languages)
+
+# Print sorted list (temporary)
+print("Alphabetically sorted:", sorted(languages))
+
+# Print reverse sorted list (temporary)
+print("Reverse alphabetically sorted:", sorted(languages, reverse=True))
+
+# Show list still unchanged
+print("Still original list:", languages)
+
+# Reverse list (permanent)
+languages.reverse()
+print("Reversed list:", languages)
+
+# Reverse again to original
+languages.reverse()
+print("Back to original list:", languages)
+
+# Sort list permanently
+languages.sort()
+print("Permanently sorted list:", languages)
+
+# Sort in reverse permanently
+languages.sort(reverse=True)
+print("Permanently reverse sorted list:", languages)
+
+# Length of the list
+print("Number of languages in the list:", len(languages))
+# Guest list
+guests = ["Michelle Obama", "Jeremy Lin", "LeBron James", "Jalen Brunson", "Stephen Curry", "Zendaya"]
+
+# Intentional error: trying to access an index that doesn't exist (index 10)
+print(guests[10])  # This line will cause an IndexError
